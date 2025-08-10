@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+body {
+    background-color: rgb(166, 179, 216);
+}
+section,
+footer {
+    padding: 54px 0;
+}
+h3{
+    font-size: 50px;
+}
+p {
+    color: rgb(44, 40, 90);
+}
+nav img {
+    width: 70px;
+    height: auto;
+    display: block;
+    border-radius: 80%;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.btn {
+    background-color: rgb(11, 16, 53);
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s
+}
+.btn:hover{
+    background-color: rgb(75, 118, 209);
+}
+
+header{
+    background-position: center;
+    background-size: cover;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px
+}
+nav ul {
+    display: flex;
+    align-items: center;
+
+}
+nav ul a {
+    color: rgb(255, 255, 255);
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+nav ul a::after{
+    content: "";
+    background-color: rgb(46, 47, 145);
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s;
+    margin: 0 auto;
+}
+nav ul a:hover::after{
+    width: 100%;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+}
+.banner .banner-text {
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+.banner .banner-text h1 {
+    font-size: 96px;
+    color: rgb(7, 15, 37);
+}
+.banner .banner-text p {
+    font-size: 20px;
+    color: rgb(7, 15, 37);
+    font-weight: lighter;
+    margin: 15px 0;
+}
+footer {
+     background-color: rgb(11, 16, 53);
+    color: rgb(159, 166, 231);
+    font-size: 12px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    width: 100%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+.login-menu-btn {
+    color: white;
+    margin-right: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.login-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.login-container, .register-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-container h2, .register-container h2 {
+    text-align: center;
+    color: rgb(11, 16, 53);
+    margin-bottom: 15px;
+}
+
+.login-container form, .register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container input, .register-container input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button, .register-container button {
+    background-color: rgb(11, 16, 53);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover, .register-container button:hover {
+    background-color: rgb(75, 118, 209);
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+.login-container, .register-container {
+    width: 250px;
+}
+.login-menu-btn {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: rgb(11, 16, 53);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-menu-btn:hover {
+    background-color: rgb(75, 118, 209);
+}
+
+body.ementa-page {
+    background-image: url('img/fundoementa.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.ementa {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    color: rgb(7, 15, 37);
+    min-height: 60vh;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 30px auto 50px auto;
+}
+
+.ementa h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(11, 16, 53);
+}
+
+.ementa ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.ementa li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: rgb(11, 16, 53);
+    color: rgb(159, 166, 231);
+    font-size: 12px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+}
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+
+body.conteudo-page {
+    background-image: url('img/fundoementa.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.conteudo {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    color: rgb(7, 15, 37);
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: 30px auto 50px auto;
+}
+
+.conteudo h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(11, 16, 53);
+}
+
+.conteudo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.conteudo-item .texto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.conteudo-item .texto h2 {
+    color: rgb(11, 16, 53);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.conteudo-item .texto p {
+    font-size: 18px;
+}
+
+.conteudo-item .imagem {
+    flex: 1;
+    text-align: right;
+}
+
+.conteudo-item .imagem img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+body.exercicios-page {
+    background-image: url('img/fundoexercicios.jpg'); /* troca pela sua imagem */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.exercicios {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    color: rgb(7, 15, 37);
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 30px auto 50px auto;
+}
+
+.exercicios h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: rgb(11, 16, 53);
+}
+
+.exercicios ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.exercicios li {
+    margin-bottom: 15px;
+}
+
+.exercicios a {
+    color: rgb(11, 16, 53);
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.exercicios a:hover {
+    color: rgb(75, 118, 209);
+}

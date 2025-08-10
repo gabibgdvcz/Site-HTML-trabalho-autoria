@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quimicamente</title>
+</head>
+<body>
+    <header style="background-image: url(img/fundo.jpg);
+    background-repeat: no-repeat; background-size: cover;">
+        <div class="conteiner">
+            <nav>
+                 <a href="index.html">
+                    <img src="img/logo.jpg" alt="Logo">
+                 </a>
+                 <a href="#" id="login-btn" class="login-menu-btn">Login / Cadastre-se</a>
+                 <ul class="ul">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="ementa.html">Ementa</a></li>
+                    <li><a href="conteudo.html">Conteúdo</a></li>
+                    <li><a href="exercicios.html">Exercícios</a></li>
+                 </ul>
+            </nav>
+            <section class="banner">
+                <div class="banner-text">
+                    <h1>Quimicamente</h1>
+                    <p>Um site criado para auxiliar nos seus estudos sobre química, para estudantes que desejam aprender química de uma forma mais didática</p>
+                    <a href="conteudo.html" class="btn">Comece a aprender</a>
+                </div>
+            </section>
+        </div>
+    </header>
+    <footer>
+         <div class="footer-left">
+        Instituto Federal de Educação, Ciência e Tecnologia do Estado do Rio Grande do Norte
+    </div>
+    <div class="footer-center">
+        Prof. Marcelo Figueiredo Barbosa Júnior
+    </div>
+    <div class="footer-right">
+        Componentes: Gabriela B, Ane Laís e Laylla Sofia.
+    </div>
+</footer>
+<div id="login-popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        
+        <div class="login-container">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <p>Não tem conta? <a href="#cadastro">Cadastre-se</a></p>
+        </div>
+
+        <div class="register-container" id="cadastro">
+            <h2>Cadastre-se</h2>
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit" class="btn">Criar Conta</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    const loginBtn = document.getElementById('login-btn');
+    const popup = document.getElementById('login-popup');
+    const closeBtn = document.querySelector('.close-btn');
+
+    loginBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        popup.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+        }
+    });
+    const forms = document.querySelectorAll('.login-container form, .register-container form');
+
+forms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        popup.style.display = 'none';
+    });
+});
+</script>
+</body>
+</html>
